@@ -1,0 +1,9 @@
+<header class="banner shadow">
+  {{ with .Site.Params.bannerImage }}
+    <img class="shadow" src="{{ . | absURL }}">
+  {{ else }}
+    <div class="background primary"></div>
+  {{ end }}
+  {{- partial "banner/container.html" . -}}
+
+</header>

@@ -1,0 +1,11 @@
+<div id="content">
+  <div class="grid-container">
+    {{- partial "sides/left.html" . -}}
+
+    <div class="grid-center">
+      {{ .Content }}
+    </div>
+
+    {{- partial "sides/right.html" . -}}
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="grid-left">
+  {{ range where .Site.Pages "Type" "=" "left"}}
+    {{ .Content }}
+  {{ end }}
+</div>

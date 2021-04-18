@@ -1,0 +1,13 @@
+{{ if (or (.Site.Menus.buttons) (.Site.Params.bannerText)) }}
+<div class="container shadow rounded secondary">
+  {{ with .Site.Params.bannerText }} <h1>{{ . }}</h1> {{ end }}
+  {{ range .Site.Menus.buttons }}
+    <a
+      class="{{ with .Params.class }} {{ . }} {{ end }} button shadow rounded"
+      href="{{ .URL }}"
+    >
+      {{ .Name }}
+    </a>
+  {{ end }}
+</div>
+{{ end }}
