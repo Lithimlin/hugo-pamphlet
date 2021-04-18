@@ -1,5 +1,8 @@
 <div class="grid-left">
+  {{ $currentPage := . }}
   {{ range where .Site.Pages "Type" "=" "left"}}
-    {{ .Content }}
+    {{ if ne . $currentPage }}
+      {{ .Content }}
+    {{ end }}
   {{ end }}
 </div>
