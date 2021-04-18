@@ -1,5 +1,10 @@
+/* --------------
+ * Variable declarations
+ * -------------- */
+
 :root {
   --primary-text-color: #fff;
+  --highlight-text-color: rgb(10, 138, 101);
 
   --primary-color: rgb(13, 189, 139);
   --secondary-color: #dadada;
@@ -11,15 +16,49 @@
   --banner-height: 450px;
 }
 
+/* --------------
+ * Global styles
+ * -------------- */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   margin: 0;
 }
 
-h1, h2 {
+/* --------------
+ * Typography
+ * -------------- */
+
+h1,
+h2 {
   margin: 0;
 }
+
+a {
+  color: var(--highlight-text-color);
+}
+
+ /* Content */
+
+#content {
+  padding: 1.5em 2em;
+}
+
+#content p {
+  text-align: justify;
+}
+
+#content img,
+#content video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------
+ * Grid layout
+ * -------------- */
 
 .grid-container {
   display: grid;
@@ -51,6 +90,12 @@ h1, h2 {
   overflow-y: auto;
 }
 
+/* --------------
+ * Components
+ * -------------- */
+
+ /* Topnav */
+
 .topnav {
   width: 100%;
   height: auto;
@@ -71,7 +116,7 @@ h1, h2 {
   padding-left: 0;
 }
 
-.topnav ul li {
+.topnav li {
   list-style-type: none;
   margin: 1em 1.5em;
   cursor: pointer;
@@ -82,6 +127,8 @@ h1, h2 {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+
+ /* Banner */
 
 .banner {
   position: relative;
@@ -113,6 +160,8 @@ h1, h2 {
   height: var(--banner-height);
 }
 
+ /* Buttons */
+
 .button {
   color: #000;
   background-color: var(--secondary-color);
@@ -128,20 +177,9 @@ h1, h2 {
   text-decoration: none;
 }
 
-#content {
-  padding: 1.5em 2em;
-}
-
-#content p {
-  text-align: justify;
-}
-
-#content img,
-#content video {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* --------------
+ * single property classes
+ * -------------- */
 
 .primary {
   color: var(--primary-text-color);
