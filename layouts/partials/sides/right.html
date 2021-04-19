@@ -1,6 +1,6 @@
 <div class="grid-right">
   {{ $currentPage := . }}
-  {{ range where .Site.Pages.ByWeight "Type" "=" "right"}}
+  {{ range where .Site.Pages "Type" "=" "right"}}
     {{ if ne . $currentPage }}
       {{ .Content }}
     {{ end }}
