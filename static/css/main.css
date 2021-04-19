@@ -121,6 +121,10 @@ a {
   padding-left: 0;
 }
 
+.topnav .right-bound {
+  margin-left: auto;
+}
+
 .topnav li {
   list-style-type: none;
   margin: 1em 1.5em;

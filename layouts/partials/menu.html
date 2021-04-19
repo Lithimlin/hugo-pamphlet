@@ -1,15 +1,31 @@
 {{ $currentPage := . }}
-{{ with .Site.Menus.main }}
+{{ if (or (.Site.Menus.main) (.Site.Menus.mainRight) ) }}
 <div class="topnav">
   <ul>
-    {{ range . }}
+    {{ range .Site.Menus.main }}
     <li>
-      <a href="{{ .URL }}">
+      <a
+        {{ with .Params.class }} class="{{ . }}"{{ end }}
+        href="{{ .URL }}"
+      >
         {{ .Pre }}
         {{ .Name }}
       </a>
     </li>
     {{ end }}
+  </ul>
+  <ul class="right-bound">
+    {{ range .Site.Menus.mainright }}
+    <li>
+      <a
+        {{ with .Params.class }} class="{{ . }}"{{ end }}
+        href="{{ .URL }}"
+      >
+        {{ .Pre }}
+        {{ .Name }}
+      </a>
+    </li>
+  {{ end }}
   </ul>
 </div>
 {{ end }}
