@@ -21,7 +21,12 @@
  * -------------- */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family:
+    system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Cantarell", "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   background-color: var(--background-color);
   margin: 0;
 }
