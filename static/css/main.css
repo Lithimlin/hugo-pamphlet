@@ -182,6 +182,22 @@ a {
   text-decoration: none;
 }
 
+ /* -- Warning Box -- */
+
+.warning {
+  background-color: rgb(226, 56, 78);
+  color: white;
+  border: 2px solid rgb(186, 20, 41);
+
+  padding: 1em 2em;
+  margin-bottom: 2em;
+
+  font-size: 18px;
+  font-weight: 800;
+  hyphens: auto;
+  text-align: center;
+}
+
 /* --------------
  * single property classes
  * -------------- */
