@@ -1,3 +1,11 @@
 <footer id="footer">
-  <div>I'm a footer!</div>
+  <div class="side-padding">
+    <div>
+      This page was last updated on {{ now.Format "2006-01-02 at 15:04" }}.
+    </div>
+    <hr>
+    {{ with .Site.Params.copyright }}
+      <div>{{ . | markdownify }}</div>
+    {{ end }}
+  </div>
 </footer>

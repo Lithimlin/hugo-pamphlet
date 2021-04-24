@@ -117,6 +117,22 @@ a:active {
   text-align: center;
 }
 
+ /* Footer */
+
+footer {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  line-height: 1.7em;
+  color: #394252;
+}
+
+footer hr {
+  border-color: inherit;
+  border-style: dotted;
+  margin: .1em 0;
+  opacity: .8;
+}
+
 /* --------------
  * Grid layout
  * -------------- */
@@ -273,6 +289,14 @@ a:active {
   padding: 1em 2em;
   margin-bottom: 2em;
 }
+
+ /* Footer */
+
+ footer {
+   width: 50vw;
+   margin: 1em auto;
+   margin-bottom: 2em;
+ }
 
 /* --------------
  * single property classes

@@ -16,10 +16,16 @@
   .grid-left, .grid-right {
     border-top: 1px dotted #ccc;
   }
+
+  footer {
+    width: auto;
+    margin: 1em 2em;
+    margin-bottom: 2em;
+  }
 }
 
 @media (max-width: 750px) {
-  .side-padding {
+  .side-padding, .grid-left, .grid-right {
     padding: 0 1em;
   }
 
