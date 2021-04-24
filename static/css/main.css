@@ -13,6 +13,7 @@
   --primary-highlight-color: rgb(9, 153, 112);
   --secondary-highlight-color: #9c9c9c;
 
+  --topnav-height: 70px;
   --banner-height: 450px;
 }
 
@@ -44,6 +45,14 @@ a {
   color: var(--highlight-text-color);
 }
 
+a:hover{
+  opacity: .8;
+}
+
+a:focus {
+  outline: 2px solid var(--clr-highlight);
+  outline-offset: 3px;
+}
 
 .card {
   color: var(--primary-text-color);
@@ -56,6 +65,10 @@ a {
 
  /* Banner */
 
+ .banner {
+   overflow: hidden;
+ }
+
 .banner h1 {
   font-size: 2.1rem;
   font-weight: 500;
@@ -64,7 +77,9 @@ a {
  /* Content */
 
 #content {
+  --clr-highlight: var(--primary-color);
   padding: 1.5em 2em;
+  overflow-x: hidden;
 }
 
 #content p {
@@ -73,8 +88,7 @@ a {
   color: #394252;
 }
 
-#content h1,
-#content h2 {
+#content :is(h1, h2) {
   color: #121720;
 }
 
@@ -140,10 +154,13 @@ a {
  /* Topnav */
 
 .topnav {
+  --clr-highlight: var(--secondary-color);
+
   display: flex;
   width: 100%;
-  height: auto;
+  height: var(--topnav-height);
   background-color: var(--primary-color);
+  overflow: hidden;
 
   font-weight: bold;
 }
@@ -212,8 +229,9 @@ a {
  /* -- Buttons -- */
 
 .button {
+  --clr-bg: var(--secondary-color);
   color: #000;
-  background-color: var(--secondary-color);
+  background-color: var(--clr-bg);
 
   padding: 1em;
   margin: .5em;
@@ -226,9 +244,21 @@ a {
   text-decoration: none;
 }
 
+.button:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--clr-bg),
+    0 0 0 5px var(--clr-highlight);
+}
+
+.container .button {
+  --clr-highlight: var(--primary-color);
+}
+
  /* -- Warning Box -- */
 
 .warning {
+  --clr-highlight: #121212;
   background-color: rgb(226, 56, 78);
   border: 2px solid rgb(186, 20, 41);
 
@@ -241,11 +271,13 @@ a {
  * -------------- */
 
 .primary {
+  --clr-highlight: var(--secondary-color);
   color: var(--primary-text-color);
   background-color: var(--primary-color);
 }
 
 .secondary {
+  --clr-highlight: var(--primary-color);
   background-color: var(--secondary-color);
 }
 
