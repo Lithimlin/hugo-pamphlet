@@ -1,19 +1,21 @@
 {{ $currentPage := . }}
 {{ if (or (.Site.Menus.main) (.Site.Menus.mainRight) ) }}
 <div class="topnav">
-  <ul>
-    {{ range .Site.Menus.main }}
-    <li>
-      <a
-        {{ with .Params.class }} class="{{ . }}"{{ end }}
-        href="{{ .URL }}"
-      >
-        {{ .Pre }}
-        {{ .Name }}
-      </a>
-    </li>
-    {{ end }}
-  </ul>
+  <input type="checkbox" id="dropdown-toggle">
+  <label for="dropdown-toggle" id="dropdown-toggle-label"><i class="fas fa-bars"></i></label>
+    <ul class="dropdown">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a
+          {{ with .Params.class }} class="{{ . }}"{{ end }}
+          href="{{ .URL }}"
+        >
+          {{ .Pre }}
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
   <ul class="right-bound">
     {{ range .Site.Menus.mainright }}
     <li>

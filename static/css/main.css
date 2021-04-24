@@ -97,9 +97,9 @@ a:focus {
   font-weight: 800;
 }
 
-#content img,
-#content video {
+#content :is(img, video) {
   display: block;
+  max-width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
   margin-left: auto;
@@ -166,32 +166,36 @@ a:focus {
 }
 
 .topnav img {
-  max-height: 2em;
-
-  margin-top: -25%;
-  margin-bottom: -35%;
-  margin-left: -.2em;
+  max-height: 45px;
+  margin-top: 15%;
 }
 
 .topnav ul {
   display: flex;
+  height: inherit;
   margin: 0;
   padding-left: 0;
 }
 
 .topnav .right-bound {
+  display: flex;
   margin-left: auto;
 }
 
 .topnav li {
   list-style-type: none;
-  margin: 1em 1.5em;
+  margin: auto 1em;
   cursor: pointer;
 }
 
 .topnav a {
   text-decoration: none;
   color: var(--primary-text-color);
+}
+
+#dropdown-toggle,
+#dropdown-toggle-label {
+  display: none;
 }
 
  /* -- Banner -- */
@@ -316,4 +320,8 @@ a:focus {
 
 .fw-800 {
   font-weight: 800;
+}
+
+.side-padding {
+  padding: 0em 4em;
 }
