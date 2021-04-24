@@ -49,9 +49,13 @@ a:hover{
   opacity: .8;
 }
 
-a:focus {
+a:focus-visible {
   outline: 2px solid var(--clr-highlight);
   outline-offset: 3px;
+}
+
+a:active {
+  opacity: .7;
 }
 
 .card {
