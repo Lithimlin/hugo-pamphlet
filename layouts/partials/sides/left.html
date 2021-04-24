@@ -2,7 +2,9 @@
   {{ $currentPage := . }}
   {{ range where .Site.Pages "Type" "=" "left" }}
     {{ if ne . $currentPage }}
-      {{ .Content }}
+      <a href="{{ .Permalink }}" class="card">
+        {{ .Content }}
+      </a>
     {{ end }}
   {{ end }}
 </div>

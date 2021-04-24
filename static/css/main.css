@@ -44,6 +44,16 @@ a {
   color: var(--highlight-text-color);
 }
 
+
+.card {
+  color: var(--primary-text-color);
+}
+
+.card:hover {
+  opacity: .85;
+  background-color: var(--background-color);
+}
+
  /* Banner */
 
 .banner h1 {
