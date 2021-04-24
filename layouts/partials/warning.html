@@ -1,5 +1,5 @@
-{{ with .Site.Params.warning }}
+{{ range where .Site.Pages "Type" "=" "warning" }}
   <div class="warning rounded shadow">
-    {{ . }}
+    {{ .Content }}
   </div>
 {{ end }}
