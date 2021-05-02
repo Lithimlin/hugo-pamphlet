@@ -58,7 +58,7 @@ a:active {
   opacity: .7;
 }
 
-.card {
+.card > a {
   color: var(--primary-text-color);
 }
 

@@ -10,15 +10,15 @@
   }
 
   .side-padding, .grid-left, .grid-right {
-    padding: 1em 3em;
+    padding: 0 3em;
   }
 
-  .grid-left, .grid-right {
+  .card {
+    padding: 1em 0;
+  }
+
+  :is(.grid-left, .grid-right) .card:first-child {
     border-top: 1px dotted #ccc;
-  }
-
-  :is(.grid-left,.grid-right):is(:-moz-only-whitespace,:blank) {
-    display: none;
   }
 
   footer {

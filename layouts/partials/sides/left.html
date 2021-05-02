@@ -1,10 +1,13 @@
+{{ $leftPages := where .Site.Pages "Type" "left"}}
+{{ $currentPage := . }}
 <div class="grid-left">
-  {{ $currentPage := . }}
-  {{ range where .Site.Pages "Type" "=" "left" }}
+  {{ range $leftPages }}
     {{ if ne . $currentPage }}
-      <a href="{{ .Permalink }}" class="card">
-        {{ .Content }}
-      </a>
+      <div class="card">
+        <a href="{{ .Permalink }}">
+          {{ .Content }}
+        </a>
+      </div>
     {{ end }}
   {{ end }}
 </div>
