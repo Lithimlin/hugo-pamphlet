@@ -17,6 +17,10 @@
     border-top: 1px dotted #ccc;
   }
 
+  :is(.grid-left,.grid-right):is(:-moz-only-whitespace,:blank) {
+    display: none;
+  }
+
   footer {
     width: auto;
     margin: 1em 2em;
