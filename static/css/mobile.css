@@ -14,7 +14,7 @@
   }
 
   .card {
-    padding: 1em 0;
+    padding-top: 1em;
   }
 
   :is(.grid-left, .grid-right) .card:first-child {
